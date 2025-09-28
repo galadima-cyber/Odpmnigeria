@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -69,7 +69,7 @@
               <button
                 class="bg-odpm-green text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors duration-200 font-medium"
               >
-                Join Us
+                <a href="#contact">Join Us</a>
               </button>
             </div>
           </div>
@@ -123,7 +123,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="py-20 bg-gradient-to-br relative overflow-hidden">
+    <section class="py-20 bg-gradient-to-br relative overflow-hidden reveal">
       <!-- Background Pattern -->
       <div
         class="absolute inset-0"
@@ -174,7 +174,7 @@
     </section>
 
     <!-- Founder Profile Section -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white reveal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div class="order-2 lg:order-1">
@@ -244,7 +244,7 @@
     </section>
 
     <!-- Vision & Mission Section -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-gray-50 reveal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <div class="inline-block mb-4">
@@ -312,7 +312,7 @@
     </section>
 
     <!-- Achievements Section -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white reveal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <div class="inline-block mb-4">
@@ -462,7 +462,7 @@
     </section>
 
     <!-- Contact Founder Section -->
-    <section class="py-20 bg-odpm-light">
+    <section class="py-20 bg-odpm-light reveal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <div class="inline-block mb-4">
@@ -491,7 +491,7 @@
               Send a message directly to our founder
             </p>
             <a
-              href="mailto:founder@odpmnigeria.org"
+              href="mailto:umarbellogaladima@gmail.com"
               class="text-odpm-green hover:text-green-700 font-semibold"
             >
               ubg@odpmnigeria.org
@@ -501,11 +501,11 @@
           <div
             class="text-center bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
-            <i class="fab fa-linkedin text-4xl text-odpm-green mb-4"></i>
-            <h3 class="text-xl font-bold text-gray-900 mb-4">LinkedIn</h3>
+            <i class="fab fa-facebook text-4xl text-odpm-green mb-4"></i>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Facebook</h3>
             <p class="text-gray-700 mb-4">Connect professionally on LinkedIn</p>
             <a
-              href="#"
+              href="https://facebook.com/umar.bellogaladima"
               class="text-odpm-green hover:text-green-700 font-semibold"
             >
               Umar Bello Galadima
@@ -519,7 +519,7 @@
             <h3 class="text-xl font-bold text-gray-900 mb-4">Twitter</h3>
             <p class="text-gray-700 mb-4">Follow for updates and insights</p>
             <a
-              href="#"
+              href="https://x.com/UBGaladima21"
               class="text-odpm-green hover:text-green-700 font-semibold"
             >
               @UbgODPM
@@ -530,12 +530,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-16">
+    <footer class="bg-gray-900 text-white py-16 reveal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div class="space-y-4">
             <img
-              src="/images/logo2.jpg"
+              src="images/logo1.jpg"
               alt="ODPM Logo"
               class="h-16 md:h-20 w-auto"
             />
@@ -641,8 +641,8 @@
 
         <div class="border-t border-gray-700 pt-8">
           <div class="flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-400 mb-4 md:mb-0">
-              Â© 2025 ODPMNIGERIA. All rights reserved. Organization for
+            <p class="text-gray-400 mb-4 md:mb-0 " id="copyright">
+              Â© `${new Date().getFullYear()}` ODPMNIGERIA. All rights reserved. Organization for
               Development and Political Matrix.
             </p>
             <div class="flex space-x-6">
@@ -670,6 +670,30 @@
           const mobileMenu = document.getElementById("mobile-menu");
           mobileMenu.classList.toggle("hidden");
         });
+        document.getElementById("copyright").textContent = `© ${new Date().getFullYear()} ODPMNIGERIA. All rights reserved. Organization for Development and Political Matrix.`;
+        const revealElements = document.querySelectorAll("section, .reveal");
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate-reveal");
+      observer.unobserve(entry.target); // animate once
+    }
+  });
+}, { threshold: 0.1 });
+
+revealElements.forEach(el => {
+  el.classList.add("opacity-0", "translate-y-10", "transition-all", "duration-1000");
+  observer.observe(el);
+});
+
     </script>
+    <style>
+      /* Tailwind utility overrides for reveal */
+      .animate-reveal {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      }
+      </style>
   </body>
 </html>

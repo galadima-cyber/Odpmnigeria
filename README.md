@@ -16,9 +16,9 @@ The site provides an accessible hub for both administrators and users, ensuring 
 
 ## 🛠️ Tech Stack
 - **Frontend:** HTML, CSS, JavaScript (custom or framework like React)  
-- **Backend:** [e.g., Node.js, Django, Flask — update based on your project]  
+- **Backend:** [e.g., Node.js, Django, Flask]  
 - **Database:** [MySQL / PostgreSQL / MongoDB, etc.]  
-- **Hosting/Deployment:** GitHub Pages / Vercel / Netlify (update as relevant)  
+- **Hosting/Deployment:** GitHub Pages / Vercel / Netlify  
 
 ---
 

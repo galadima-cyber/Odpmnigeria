@@ -1,0 +1,738 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Executive Members - ODPM Nigeria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .excutive {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(5px);
+      }
+    </style>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "odpm-green": "#059669",
+              "odpm-light": "#F0FDF4",
+              "odpm-lemon": "#DCFCE7",
+              "odpm-mint": "#10B981",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white font-sans">
+    <!-- Navigation -->
+    <nav class="bg-odpm-light shadow-lg sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16 md:h-20">
+          <div class="flex items-center">
+            <img src="images/logo1.jpg" alt="ODPM Logo" class="h-16 w-auto" />
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="index.html"
+                class="text-gray-900 hover:text-odpm-green px-3 py-2 text-lg font-medium transition-colors duration-200"
+                >Home</a
+              >
+              <a
+                href="index.html#vision"
+                class="text-gray-900 hover:text-odpm-green px-3 py-2 text-lg font-medium transition-colors duration-200"
+                >Our Vision</a
+              >
+              <a
+                href="index.html#programs"
+                class="text-gray-900 hover:text-odpm-green px-3 py-2 text-lg font-medium transition-colors duration-200"
+                >Programs</a
+              >
+              <a
+                href="executives.html"
+                class="text-odpm-green px-3 py-2 text-lg font-medium"
+                >Executives</a
+              >
+              <a
+                href="founder.html"
+                class="text-gray-900 hover:text-odpm-green px-3 py-2 text-lg font-medium transition-colors duration-200"
+                >Founder</a
+              >
+              <button
+                class="bg-odpm-green text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors duration-200 font-medium"
+              >
+                Join Us
+              </button>
+            </div>
+          </div>
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button
+              type="button"
+              class="text-gray-900 hover:text-odpm-green focus:outline-none focus:text-odpm-green"
+              id="mobile-menu-button"
+            >
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-odpm-light border-t">
+          <a
+            href="index.html"
+            class="text-gray-900 hover:text-odpm-green block px-3 py-2 text-base font-medium"
+            >Home</a
+          >
+          <a
+            href="index.html#vision"
+            class="text-gray-900 hover:text-odpm-green block px-3 py-2 text-base font-medium"
+            >Our Vision</a
+          >
+          <a
+            href="index.html#programs"
+            class="text-gray-900 hover:text-odpm-green block px-3 py-2 text-base font-medium"
+            >Programs</a
+          >
+          <a
+            href="executives.html"
+            class="text-odpm-green block px-3 py-2 text-base font-medium"
+            >Executives</a
+          >
+          <a
+            href="founder.html"
+            class="text-gray-900 hover:text-odpm-green block px-3 py-2 text-base font-medium"
+            >Founder</a
+          >
+          <button
+            class="w-full bg-odpm-green text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors duration-200 font-medium mt-2"
+          >
+            Join Us
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      style="
+        background-image: url('images/Anualmeet.jpg');
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <div class="text-center excutive">
+        <div class="py-20">
+          <h1
+            class="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6"
+          >
+            Executive Members
+          </h1>
+          <p class="text-xl text-white opacity-90 max-w-3xl mx-auto">
+            Meet the dedicated leaders driving positive change across Nigeria
+            through community development, humanitarian initiatives, and
+            political activism.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Executive Members Grid -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <div class="inline-block mb-4">
+            <span
+              class="bg-odpm-mint text-white px-4 py-2 rounded-full text-sm font-semibold"
+              >Leadership Team</span
+            >
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Our Executive Board
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Click on any member to learn more about their background,
+            achievements, and vision for Nigeria's future.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8"
+          id="executives-grid"
+        >
+          <!-- Executive members will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div
+      id="executiveModal"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4"
+      style="overflow: hidden"
+    >
+      <!-- overflow-y-auto -->
+      <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh]">
+        <div class="p-8">
+          <div class="flex justify-between items-start mb-6">
+            <h3 class="text-2xl font-bold text-gray-900" id="modalName">
+              Executive Name
+            </h3>
+            <button
+              onclick="closeModal()"
+              class="text-gray-400 hover:text-gray-600 transition-colors duration-200"
+            >
+              <i class="fas fa-times text-2xl"></i>
+            </button>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-6 mb-6">
+            <div class="flex-shrink-0">
+              <img
+                id="modalImage"
+                src=""
+                alt="Executive Photo"
+                class="w-48 h-48 object-cover rounded-xl shadow-lg"
+              />
+            </div>
+            <div class="flex-1">
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-2">
+                    Position
+                  </h4>
+                  <p id="modalPosition" class="text-gray-700">
+                    Executive Position
+                  </p>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-2">
+                    Experience
+                  </h4>
+                  <p id="modalExperience" class="text-gray-700">
+                    Years of experience
+                  </p>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-2">
+                    Education
+                  </h4>
+                  <p id="modalEducation" class="text-gray-700">
+                    Educational background
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-3">About</h4>
+              <p id="modalAbout" class="text-gray-700 leading-relaxed">
+                Executive background and achievements
+              </p>
+            </div>
+
+            <div
+              class="bg-gradient-to-r from-odpm-mint to-white p-6 rounded-xl"
+            >
+              <h4 class="text-lg font-semibold text-gray-900 mb-3">Quote</h4>
+              <blockquote
+                id="modalQuote"
+                class="text-gray-700 italic text-lg leading-relaxed"
+              >
+                "Inspirational quote from the executive"
+              </blockquote>
+            </div>
+
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="#"
+                class="flex items-center text-odpm-green hover:text-green-700 transition-colors duration-200"
+              >
+                <i class="fab fa-linkedin mr-2"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href="#"
+                class="flex items-center text-odpm-green hover:text-green-700 transition-colors duration-200"
+              >
+                <i class="fab fa-twitter mr-2"></i>
+                <span>Twitter</span>
+              </a>
+              <a
+                href="#"
+                class="flex items-center text-odpm-green hover:text-green-700 transition-colors duration-200"
+              >
+                <i class="fas fa-envelope mr-2"></i>
+                <span>Email</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div class="space-y-4">
+            <img
+              src="images/logo2.jpg"
+              alt="ODPM Logo"
+              class="h-16 md:h-20 w-auto"
+            />
+            <p class="text-gray-300 leading-relaxed">
+              ODPMNIGERIA is driving positive change across Nigeria through
+              community development, humanitarian initiatives, and political
+              activism.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors duration-200"
+              >
+                <i class="fab fa-facebook text-xl"></i>
+              </a>
+              <a
+                href="`${executive.twitter}`"
+                class="text-gray-400 hover:text-white transition-colors duration-200"
+              >
+                <i class="fab fa-twitter text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors duration-200"
+              >
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors duration-200"
+              >
+                <i class="fab fa-linkedin text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-300 hover:text-white transition-colors duration-200"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#about"
+                  class="text-gray-300 hover:text-white transition-colors duration-200"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#programs"
+                  class="text-gray-300 hover:text-white transition-colors duration-200"
+                  >Our Programs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#vision"
+                  class="text-gray-300 hover:text-white transition-colors duration-200"
+                  >Our Vision</a
+                >
+              </li>
+              <li>
+                <a
+                  href="executives.html"
+                  class="text-gray-300 hover:text-white transition-colors duration-200"
+                  >Executives</a
+                >
+              </li>
+              <li>
+                <a
+                  href="founder.html"
+                  class="text-gray-300 hover:text-white transition-colors duration-200"
+                  >Founder</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-6">Contact Us</h3>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <i class="fas fa-map-marker-alt mr-3 text-odpm-green"></i>
+                <span class="text-gray-300">Kano, Nigeria</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope mr-3 text-odpm-green"></i>
+                <span class="text-gray-300">info@odpmnigeria.org</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone mr-3 text-odpm-green"></i>
+                <span class="text-gray-300">+2347030895429</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 mb-4 md:mb-0">
+              © 2025 ODPMNIGERIA. All rights reserved. Organization for
+              Development and Political Matrix.
+            </p>
+            <div class="flex space-x-6">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors duration-200"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors duration-200"
+                >Terms of Service</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Executive members data
+      const executives = [
+        {
+          id: 1,
+          name: "Ahmadu Ibrahim",
+          position: "President",
+          image: "images/founder.jpg",
+          experience: "8 years",
+          education: "MSc Political Science, Ahmadu Bello University",
+          about:
+            "Ahmadu Ibrahim is a passionate advocate for youth empowerment and community development. With over 8 years of experience in political activism and social work, he has led numerous initiatives that have positively impacted thousands of lives across Nigeria.",
+          quote:
+            "The future of Nigeria lies in the hands of our youth. We must empower them to be agents of positive change.",
+          twitter: "https:google.com",
+        },
+        {
+          id: 2,
+          name: "Fatima Abdullahi",
+          position: "Vice President",
+          image: "images/student-girls.jpg",
+          experience: "6 years",
+          education: "BSc Social Work, University of Lagos",
+          about:
+            "Fatima Abdullahi brings extensive experience in humanitarian work and community organizing. She has been instrumental in establishing emergency response programs and women empowerment initiatives across northern Nigeria.",
+          quote:
+            "Empowering women is not just about gender equality; it's about building stronger communities.",
+        },
+        {
+          id: 3,
+          name: "Musa Garba",
+          position: "Secretary General",
+          image: "images/members.jpg",
+          experience: "5 years",
+          education: "BA Public Administration, Bayero University",
+          about:
+            "Musa Garba is known for his exceptional organizational skills and commitment to transparency. He has streamlined ODPM's operations and implemented effective communication strategies that have strengthened our network.",
+          quote:
+            "Transparency and accountability are the foundations of sustainable development.",
+        },
+        {
+          id: 4,
+          name: "Aisha Mohammed",
+          position: "Treasurer",
+          image: "images/members2.jpg",
+          experience: "7 years",
+          education: "BSc Accounting, University of Ibadan",
+          about:
+            "Aisha Mohammed is a certified accountant with a passion for financial transparency and resource management. She has successfully managed ODPM's finances and implemented cost-effective strategies for program delivery.",
+          quote:
+            "Every naira must be accounted for and used to create maximum impact for our communities.",
+        },
+        {
+          id: 5,
+          name: "Ibrahim Tanko",
+          position: "Director of Programs",
+          image: "images/members4.jpg",
+          experience: "9 years",
+          education: "MSc Development Studies, University of Abuja",
+          about:
+            "Ibrahim Tanko is a development expert with extensive experience in program design and implementation. He has led the development of ODPM's flagship programs and established partnerships with international organizations.",
+          quote:
+            "Sustainable development requires innovative solutions and collaborative partnerships.",
+        },
+        {
+          id: 6,
+          name: "Zainab Usman",
+          position: "Director of Communications",
+          image: "images/meet-members3.jpg",
+          experience: "4 years",
+          education: "BA Mass Communication, Ahmadu Bello University",
+          about:
+            "Zainab Usman is a skilled communicator who has elevated ODPM's public profile through strategic media campaigns and digital outreach. She has built strong relationships with media partners and stakeholders.",
+          quote:
+            "Effective communication bridges the gap between intention and impact.",
+        },
+        {
+          id: 7,
+          name: "Yusuf Bello",
+          position: "Director of Operations",
+          image: "images/meet1-founder.jpg",
+          experience: "6 years",
+          education: "BSc Business Administration, University of Kano",
+          about:
+            "Yusuf Bello oversees ODPM's day-to-day operations and ensures efficient service delivery. His background in business administration has helped streamline processes and improve organizational effectiveness.",
+          quote:
+            "Excellence in operations is the key to sustainable impact and growth.",
+        },
+        {
+          id: 8,
+          name: "Hauwa Adamu",
+          position: "Director of Youth Affairs",
+          image: "images/meet2-founder.jpg",
+          experience: "5 years",
+          education: "BA Sociology, University of Maiduguri",
+          about:
+            "Hauwa Adamu is dedicated to youth development and has created numerous opportunities for young people to engage in civic activities. She has established mentorship programs and leadership training initiatives.",
+          quote:
+            "Investing in youth today ensures a brighter tomorrow for Nigeria.",
+        },
+        {
+          id: 9,
+          name: "Mohammed Sani",
+          position: "Director of Community Development",
+          image: "images/meet3-general.jpg",
+          experience: "8 years",
+          education: "MSc Community Development, University of Jos",
+          about:
+            "Mohammed Sani has extensive experience in grassroots community development. He has led initiatives that have improved infrastructure, education, and healthcare access in rural communities across Nigeria.",
+          quote:
+            "Community development starts with listening to the people and understanding their needs.",
+        },
+        {
+          id: 10,
+          name: "Amina Hassan",
+          position: "Director of Humanitarian Affairs",
+          image: "images/meet4.jpg",
+          experience: "7 years",
+          education: "BSc International Relations, University of Abuja",
+          about:
+            "Amina Hassan coordinates ODPM's humanitarian response efforts and emergency relief programs. She has led responses to natural disasters and conflict situations, providing critical support to affected communities.",
+          quote:
+            "In times of crisis, humanity must come together to support those in need.",
+        },
+        {
+          id: 11,
+          name: "Aliyu Kabir",
+          position: "Director of Policy & Advocacy",
+          image: "images/meet6-members.jpg",
+          experience: "6 years",
+          education: "LLB Law, University of Lagos",
+          about:
+            "Aliyu Kabir is a legal expert who leads ODPM's policy advocacy efforts. He has been instrumental in developing policy recommendations and engaging with government officials to promote youth-friendly policies.",
+          quote:
+            "Policy change is the most sustainable way to create lasting impact.",
+        },
+        {
+          id: 12,
+          name: "Maryam Ibrahim",
+          position: "Director of Education",
+          image: "images/meet7-members.jpg",
+          experience: "5 years",
+          education: "MEd Educational Leadership, University of Ibadan",
+          about:
+            "Maryam Ibrahim oversees ODPM's educational programs and initiatives. She has developed curriculum for civic education and established scholarship programs for underprivileged students.",
+          quote:
+            "Education is the most powerful tool for transforming communities and breaking cycles of poverty.",
+        },
+        {
+          id: 13,
+          name: "Suleiman Garba",
+          position: "Director of Technology",
+          image: "images/prog-general.jpg",
+          experience: "4 years",
+          education: "BSc Computer Science, Federal University of Technology",
+          about:
+            "Suleiman Garba leads ODPM's digital transformation and technology initiatives. He has implemented digital solutions that have improved program delivery and stakeholder engagement.",
+          quote:
+            "Technology can amplify our impact and reach more people than ever before.",
+        },
+        {
+          id: 14,
+          name: "Khadija Musa",
+          position: "Director of Partnerships",
+          image: "images/danhajjaprog.jpg",
+          experience: "6 years",
+          education: "MBA International Business, Lagos Business School",
+          about:
+            "Khadija Musa manages ODPM's strategic partnerships with local and international organizations. She has established collaborations that have expanded ODPM's reach and impact across Nigeria.",
+          quote:
+            "Strong partnerships multiply our ability to create positive change.",
+        },
+        {
+          id: 15,
+          name: "Abdullahi Usman",
+          position: "Director of Research",
+          image: "images/marayu-visit.jpg",
+          experience: "7 years",
+          education: "PhD Political Science, University of Cambridge",
+          about:
+            "Abdullahi Usman leads ODPM's research initiatives and policy analysis. His academic background and research expertise have informed evidence-based program development and policy recommendations.",
+          quote:
+            "Data-driven decisions lead to more effective interventions and sustainable outcomes.",
+        },
+        {
+          id: 16,
+          name: "Rahma Ali",
+          position: "Director of Women Affairs",
+          image: "images/Anualmeet.jpg",
+          experience: "5 years",
+          education: "BA Gender Studies, University of Abuja",
+          about:
+            "Rahma Ali champions women's rights and empowerment initiatives within ODPM. She has developed programs that address gender inequality and promote women's participation in leadership roles.",
+          quote:
+            "When women are empowered, entire communities thrive and prosper.",
+        },
+        {
+          id: 17,
+          name: "Ibrahim Yakubu",
+          position: "Director of Security",
+          image: "images/founder-side-image.jpg",
+          experience: "8 years",
+          education: "BSc Criminology, University of Jos",
+          about:
+            "Ibrahim Yakubu ensures the safety and security of ODPM's operations and personnel. His background in criminology and security management has helped maintain secure environments for program implementation.",
+          quote:
+            "Security is fundamental to creating safe spaces for development and progress.",
+        },
+        {
+          id: 18,
+          name: "Aisha Bello",
+          position: "Director of Health",
+          image: "images/logo1.jpg",
+          experience: "6 years",
+          education: "BSc Public Health, University of Ilorin",
+          about:
+            "Aisha Bello coordinates ODPM's health programs and initiatives. She has led public health campaigns and established partnerships with healthcare providers to improve access to medical services.",
+          quote:
+            "Health is wealth, and every Nigerian deserves access to quality healthcare.",
+        },
+        {
+          id: 19,
+          name: "Mohammed Isa",
+          position: "Director of Environment",
+          image: "images/logo2.jpg",
+          experience: "5 years",
+          education: "MSc Environmental Science, University of Port Harcourt",
+          about:
+            "Mohammed Isa leads ODPM's environmental conservation and sustainability initiatives. He has implemented programs that promote environmental awareness and sustainable practices in communities.",
+          quote:
+            "Protecting our environment today ensures a sustainable future for generations to come.",
+        },
+        {
+          id: 20,
+          name: "Fatima Garba",
+          position: "Director of Legal Affairs",
+          image: "images/logo3.jpg",
+          experience: "7 years",
+          education: "LLB Law, University of Maiduguri",
+          about:
+            "Fatima Garba provides legal guidance and support for ODPM's operations and initiatives. Her expertise in civil law and human rights has helped protect the rights of beneficiaries and ensure legal compliance.",
+          quote:
+            "Justice and legal protection are essential foundations for sustainable development.",
+        },
+      ];
+
+      // Render executives grid
+      function renderExecutives() {
+        const grid = document.getElementById("executives-grid");
+        grid.innerHTML = "";
+
+        executives.forEach((executive) => {
+          const executiveCard = document.createElement("div");
+          executiveCard.className = "group cursor-pointer";
+          executiveCard.innerHTML = `
+                    <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-2">
+                        <img src="${executive.image}" alt="${executive.name}" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-lg font-bold mb-1">${executive.name}</h3>
+                            <p class="text-sm opacity-90">${executive.position}</p>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-odpm-green text-white px-3 py-1 rounded-full text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Click to learn more
+                        </div>
+                    </div>
+                `;
+
+          executiveCard.addEventListener("click", () => openModal(executive));
+          grid.appendChild(executiveCard);
+        });
+      }
+
+      // Open modal
+      function openModal(executive) {
+        document.getElementById("modalName").textContent = executive.name;
+        document.getElementById("modalImage").src = executive.image;
+        document.getElementById("modalPosition").textContent =
+          executive.position;
+        document.getElementById("modalExperience").textContent =
+          executive.experience;
+        document.getElementById("modalEducation").textContent =
+          executive.education;
+        document.getElementById("modalAbout").textContent = executive.about;
+        document.getElementById("modalQuote").textContent = executive.quote;
+
+        document.getElementById("executiveModal").classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
+
+      // Close modal
+      function closeModal() {
+        document.getElementById("executiveModal").classList.add("hidden");
+        document.body.style.overflow = "auto";
+      }
+
+      // Mobile menu functionality
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobile-menu");
+          mobileMenu.classList.toggle("hidden");
+        });
+
+      // Close modal when clicking outside
+      document
+        .getElementById("executiveModal")
+        .addEventListener("click", function (e) {
+          if (e.target === this) {
+            closeModal();
+          }
+        });
+
+      // Initialize
+      document.addEventListener("DOMContentLoaded", function () {
+        renderExecutives();
+      });
+    </script>
+  </body>
+</html>

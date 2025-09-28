@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -62,7 +62,7 @@
               <button
                 class="bg-odpm-green text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors duration-200 font-medium"
               >
-                Join Us
+                <a href="#contact-formb ">Join Us</a>
               </button>
             </div>
           </div>
@@ -167,18 +167,22 @@
           </button>
         </div>
 
+        
+
+
+
         <!-- Stats -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div class="text-center">
-            <p class="text-4xl md:text-5xl font-bold mb-2">1500+</p>
+            <p class="text-4xl md:text-5xl font-bold mb-2 counter" data-target="1500">0</p>
             <p class="text-lg md:text-xl">Community Served</p>
           </div>
           <div class="text-center">
-            <p class="text-4xl md:text-5xl font-bold mb-2">1000+</p>
+            <p class="text-4xl md:text-5xl font-bold mb-2 counter" data-target="1000">0</p>
             <p class="text-lg md:text-xl">Lives Impacted</p>
           </div>
           <div class="text-center">
-            <p class="text-4xl md:text-5xl font-bold mb-2">50+</p>
+            <p class="text-4xl md:text-5xl font-bold mb-2 counter" data-target="50">0</p>
             <p class="text-lg md:text-xl">Active Projects</p>
           </div>
         </div>
@@ -709,7 +713,7 @@
             class="bg-gradient-to-br from-odpm-mint to-white p-8 rounded-2xl shadow-lg"
           >
             <h3 class="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
-            <form class="space-y-6" action="https://formspree.io/f/manpqvqz" method="POST">
+            <form class="space-y-6" action="https://formspree.io/f/xqayenjw" method="POST" id="contact-form">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label for="fname" class="block text-sm font-semibold text-gray-700 mb-2">
@@ -789,6 +793,7 @@
                 Send Message
               </button>
             </form>
+            
           </div>
         </div>
       </div>
@@ -932,9 +937,63 @@
           const mobileMenu = document.getElementById("mobile-menu");
           mobileMenu.classList.toggle("hidden");
         });
+// --- Scroll Reveal ---
+const revealElements = document.querySelectorAll("section, .reveal");
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate-reveal");
+      observer.unobserve(entry.target); // animate once
+    }
+  });
+}, { threshold: 0.1 });
+
+revealElements.forEach(el => {
+  el.classList.add("opacity-0", "translate-y-10", "transition-all", "duration-1000");
+  observer.observe(el);
+});
+
+// --- Counter Animation ---
+function animateCounter(el, target) {
+  let current = 0;
+  const duration = 2000; // 2s animation
+  const increment = target / (duration / 16); // ~60fps
+  const update = () => {
+    current += increment;
+    if (current >= target) {
+      el.textContent = target.toLocaleString() + "+"; // format with commas + "+"
+    } else {
+      el.textContent = Math.floor(current).toLocaleString();
+      requestAnimationFrame(update);
+    }
+  };
+  update();
+}
+
+const counters = document.querySelectorAll(".counter");
+const counterObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.getAttribute("data-target"));
+      animateCounter(el, target);
+      observer.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+
+counters.forEach(c => counterObserver.observe(c));
+</script>
+
+<style>
+/* Tailwind utility overrides for reveal */
+.animate-reveal {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+</style>
+
     </script>
   </body>
 </html>
-
-
-

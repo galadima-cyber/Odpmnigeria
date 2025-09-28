@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -36,7 +36,7 @@
     <!-- Navigation -->
     <nav class="bg-odpm-light shadow-lg sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16 md:h-20">
+        <div class="flex justify-between items-center h-16 md:h-20 reveal">
           <div class="flex items-center">
             <img src="images/logo1.jpg" alt="ODPM Logo" class="h-16 w-auto" />
           </div>
@@ -130,8 +130,9 @@
         background-size: cover;
         background-position: center;
       "
+      class="reveal"
     >
-      <div class="text-center excutive">
+      <div class="text-center excutive reveal">
         <div class="py-20">
           <h1
             class="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6"
@@ -148,7 +149,7 @@
     </section>
 
     <!-- Executive Members Grid -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-gray-50 reveal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <div class="inline-block mb-4">
@@ -284,12 +285,12 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-16">
+    <footer class="bg-gray-900 text-white py-16 reveal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div class="space-y-4">
             <img
-              src="images/logo2.jpg"
+              src="images/logo1.jpg"
               alt="ODPM Logo"
               class="h-16 md:h-20 w-auto"
             />
@@ -306,7 +307,7 @@
                 <i class="fab fa-facebook text-xl"></i>
               </a>
               <a
-                href="`${executive.twitter}`"
+                href=`${executive.twitter}`
                 class="text-gray-400 hover:text-white transition-colors duration-200"
               >
                 <i class="fab fa-twitter text-xl"></i>
@@ -671,7 +672,7 @@
           const executiveCard = document.createElement("div");
           executiveCard.className = "group cursor-pointer";
           executiveCard.innerHTML = `
-                    <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-2">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-2 reveal">
                         <img src="${executive.image}" alt="${executive.name}" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
@@ -733,6 +734,31 @@
       document.addEventListener("DOMContentLoaded", function () {
         renderExecutives();
       });
+
+      // Reveal elements
+      const revealElements = document.querySelectorAll("section, .reveal");
+      const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate-reveal");
+      observer.unobserve(entry.target); // animate once
+    }
+  });
+}, { threshold: 0.1 });
+
+revealElements.forEach(el => {
+  el.classList.add("opacity-0", "translate-y-10", "transition-all", "duration-1000");
+  observer.observe(el);
+});
+
+    </script>
+    <style>
+      /* Tailwind utility overrides for reveal */
+      .animate-reveal {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      }
+      </style>
     </script>
   </body>
 </html>
